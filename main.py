@@ -3,6 +3,8 @@
 # the open-source pygame library
 # throughout this file
 import os
+import sys
+
 from constants import *
 from player import *
 from asteroid import *
@@ -49,6 +51,11 @@ def main():
         dt = res / 1000
 
         updatables.update(dt)
+
+        for asteroid in asteroids:
+            if asteroid.collides(player):
+                print("Game over!")
+                sys.exit(0)
 
 
 if __name__ == "__main__":
