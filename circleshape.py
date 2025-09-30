@@ -1,7 +1,9 @@
 import os
+
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
 
 import pygame
+
 
 # Base class for game objects
 class CircleShape(pygame.sprite.Sprite):
