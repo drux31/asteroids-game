@@ -60,6 +60,10 @@ def main():
                 print("Game over!")
                 sys.exit(0)
 
+            for shot in shots:
+                if asteroid.collides(shot):
+                    asteroid.split()
+                    shot.kill()
 
 if __name__ == "__main__":
     main()
